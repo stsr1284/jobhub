@@ -1,0 +1,279 @@
+/* Global Color Palette */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #f4f7f6;
+    --text-color: #2c3e50;
+    --border-color: #e0e4e8;
+    --danger-color: #e74c3c;
+    --light-background: #f9fafb;
+    --button-hover-color: #2980b9;
+    --input-focus-color: rgba(52, 152, 219, 0.3);
+}
+
+/* Global Styles */
+.user-management-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.6s ease; /* Subtle Animations */
+}
+
+.user-management-container:hover {
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.user-management-title {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.user-management-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+/* Common Input Styles */
+.user-management-input, 
+.personal-info-select {
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #f7f9fb;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+}
+
+.user-management-input:focus, 
+.personal-info-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px var(--input-focus-color);
+}
+
+/* Button Styles */
+.user-management-button {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--primary-color), #2980b9);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.user-management-button:hover {
+    background: linear-gradient(135deg, #2980b9, var(--primary-color));
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.user-management-button:active {
+    transform: scale(0.98) translateY(2px);
+}
+
+/* Personal Info Specific Styles */
+.personal-info {
+    background-color: white;
+    margin-bottom: 25px;
+}
+
+.user-info {
+    margin-bottom: 25px;
+}
+
+.user-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    background-color: var(--light-background);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.user-info-item:hover {
+    background-color: #e9f0f4;
+}
+
+.user-info-item strong {
+    width: 130px;
+    margin-right: 20px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.user-info-item input,
+.user-info-item select {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+}
+
+.user-info-item input:focus,
+.user-info-item select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px var(--input-focus-color);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .user-management-container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .user-info-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-info-item strong {
+        margin-bottom: 8px;
+        width: 100%;
+    }
+
+    .user-info-item input,
+    .user-info-item select {
+        width: 100%;
+    }
+}
+
+/* Subtle Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Select Dropdown Custom Styling */
+.personal-info-select {
+    appearance: none;
+    background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='%236c757d'%3E%3Cpath d='M1 4l5 5 5-5z'/%3E%3C/svg%3E") no-repeat right 18px center;
+    background-size: 12px;
+    padding-right: 40px;
+}
+
+.resume-management-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .resume-management-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .resume-details {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .resume-details p {
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .resume-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .btn-download, 
+  .btn-delete, 
+  .btn-upload {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-download {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .btn-delete {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .btn-upload {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  .btn-download:hover {
+    background-color: #45a049;
+  }
+  
+  .btn-delete:hover {
+    background-color: #d32f2f;
+  }
+  
+  .btn-upload:hover {
+    background-color: #1976D2;
+  }
+  
+  .btn-upload:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .no-resume {
+    text-align: center;
+    color: #888;
+    margin-bottom: 15px;
+  }
+  
+  .resume-upload {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .file-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
